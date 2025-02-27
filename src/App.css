@@ -12,6 +12,7 @@ h1{
   position: absolute;
   top: 2rem;
   color: white;
+  text-align: center;
 }
 
 form{
@@ -37,7 +38,7 @@ form{
 }
 
 input{
-  width: 80%;
+  width: 70%;
   font-size: 1.5rem;
   text-align: center;
   border: none;
@@ -74,4 +75,51 @@ button{
 }
 button:active{
   color: rgb(141, 141, 141);
+}
+
+
+@media (min-width: 1200px) { }
+
+@media (min-width: 760px) and (max-width: 1199px) { 
+  h1{
+    font-size: 2rem;
+  }
+  .contenedorInput{
+    height: 8vh;
+  }
+}
+
+
+@media (max-width: 767px) { 
+  form{
+    width: 95%;
+    height: 40vh;
+  }
+  select{
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px){ 
+  h1{
+    font-size: 1.5rem;
+  }
+  form{
+    width: 95%;
+    height: 60vh;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .contenedorInput{
+    height: 8vh;
+    margin: 2rem 0;
+    width: 90%;
+  }
+  input{
+    width: 60%;
+  }
+  select{
+    width: 40%;
+    font-size: 1.2rem;
+  }
 }
