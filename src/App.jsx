@@ -9,6 +9,8 @@ function App() {
 
   const [datos, setDatos] = useState(); //Datos de la API
 
+  const [tituloConversion,setTituloConversion] = useState('CONVERSOR DE DIVISAS');
+
   //Para controlar el input de la moneda
   const manejarInput = (e) => {
     setValorInputAConvertir(e.target.value);
@@ -29,31 +31,40 @@ function App() {
   //Para que cuando se "envie" el formulario se ejecute la conversion de la moneda
   const convertirMoneda = (e) => {
     e.preventDefault();
-    const nombreMonedaAConvertir = e.target.children[1].value
-    const nombreMonedaConvertida = e.target.children[3].value
+    
+    const nombreMonedaAConvertir = e.target.children[0].children[1].value
+    const nombreMonedaConvertida = e.target.children[2].children[1].value
     
     setValorInputConvertida((valorInputAConvertir * datos[nombreMonedaConvertida] / datos[nombreMonedaAConvertir]).toFixed(2));
+    setTituloConversion(`Convertir de ${nombreMonedaAConvertir} a ${nombreMonedaConvertida}`);
   }
   
   return (
-    <>
+    <div id='contenedor'>
+      <h1>{tituloConversion}</h1>
       <form onSubmit={convertirMoneda} action="">
-        <input type="number" id='aConvertir' value={valorInputAConvertir} onChange={manejarInput} />
-        <select name="" id="seleccionMonedaAConvertir">
-          {opciones.map((opcion,index) => {
-            return <option key={opcion} value={opcion}>{opcion}</option>
-          })}
-        </select>
+        <div className="contenedorInput">
+          <input type="number" id='aConvertir' value={valorInputAConvertir} onChange={manejarInput} placeholder='Digite el valor'/>
+          <select name="" id="seleccionMonedaAConvertir">
+            {opciones.map((opcion,index) => {
+              return <option key={index} value={opcion}>{opcion}</option>
+            })}
+          </select>
+        </div>
 
-        <input type="number" id='Convertida'  value={valorInputConvertida} disabled/>
-        <select name="" id="seleccionMonedaConvertir">
-          {opciones.map((opcion,index) => {
-            return <option key={opcion} value={opcion}>{opcion}</option>
-          })}
-        </select>
-        <button type="submit">Convertir</button>
+        <i class="fa-solid fa-right-long"></i>
+
+        <div className="contenedorInput">
+          <input type="number" id='Convertida'  value={valorInputConvertida} disabled/>
+          <select name="" id="seleccionMonedaConvertir">
+            {opciones.map((opcion,index) => {
+              return <option key={index} value={opcion}>{opcion}</option>
+            })}
+          </select>
+        </div>
+        <button type="submit">CONVERTIR</button>
       </form>
-    </>
+    </div>
   )
 }
 

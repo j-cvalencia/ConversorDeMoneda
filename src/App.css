@@ -1,0 +1,77 @@
+#contenedor{
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(31 73 182);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1{
+  font-size: 2.5rem;
+  position: absolute;
+  top: 2rem;
+  color: white;
+}
+
+form{
+  width: 80%;
+  height: 50vh;
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0px 10px 15px  black;
+  position: relative;
+}
+
+.contenedorInput{
+  width: 45%;
+  display: flex;
+  border: 2px solid black;
+  display: flex;
+  height: 10vh;
+  border-radius: 20px;
+  z-index: 1;
+}
+
+input{
+  width: 80%;
+  font-size: 1.5rem;
+  text-align: center;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  z-index: 0;
+}
+
+select{
+  width: 30%;
+  font-size: 1.5rem;
+  border: none;
+  text-align: center;
+  outline: none;
+  border-radius: 20px;
+}
+
+i{
+  font-size: 1.5rem;
+}
+
+button{
+  width: 50%;
+  height: 4rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: 2px solid rgb(31 73 182);
+  border-radius: 50rem;
+  position: absolute;
+  bottom: 1.2rem;
+  background-color: rgb(31 73 182);
+  color: white;
+  font-weight: bold;
+}
+button:active{
+  color: rgb(141, 141, 141);
+}
