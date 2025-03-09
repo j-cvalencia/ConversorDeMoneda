@@ -19,19 +19,22 @@ Este es un proyecto simple de conversión de divisas creado con **React**. Permi
 ## ⚙️ Instalación
 
 1. Clona el repositorio:
+   ```
    git clone https://github.com/tu-usuario/conversor-divisas-react.git
 
-2. Accede al directorio del proyecto:
+3. Accede al directorio del proyecto:
+   ```
    cd conversor-divisas-react
 
-3. Instala las dependencias:
+4. Instala las dependencias:
+   ```
    npm install
 
-4. Inicia la aplicación:
-   npm run dev
+5. Inicia la aplicación:
    ```
+   npm run dev
 
-5. Abre en tu navegador:
+6. Abre en tu navegador:
    ```
    http://localhost:5173
 
